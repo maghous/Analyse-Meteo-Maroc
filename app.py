@@ -435,17 +435,17 @@ cities = {city: city for city in available_cities}
 # ==================== SIDEBAR ====================
 
 st.sidebar.markdown("""
-    <div class="sidebar-header">
-    """, unsafe_allow_html=True)
-    
-    if os.path.exists("assets/app_preview.png"):
-        st.sidebar.image("assets/app_preview.png", use_container_width=True)
-    
-    st.sidebar.markdown("""
-        <h3 style="margin: 0.5rem 0 0 0; font-size: 1.1rem; color: #00f0ff;">⚙️ CONFIGURATION</h3>
-        <p style="color: #b0c4de; margin-top: 0.1rem; font-size: 0.85rem;">Filtres et Paramètres</p>
-    </div>
-    """, unsafe_allow_html=True)
+<div class="sidebar-header">
+""", unsafe_allow_html=True)
+
+if os.path.exists("assets/app_preview.png"):
+    st.sidebar.image("assets/app_preview.png", use_container_width=True)
+
+st.sidebar.markdown("""
+    <h3 style="margin: 0.5rem 0 0 0; font-size: 1.1rem; color: #00f0ff;">⚙️ CONFIGURATION</h3>
+    <p style="color: #b0c4de; margin-top: 0.1rem; font-size: 0.85rem;">Filtres et Paramètres</p>
+</div>
+""", unsafe_allow_html=True)
     
 st.sidebar.markdown("### 🌍 Sélection Ville")
 selected_city_name = st.sidebar.selectbox(

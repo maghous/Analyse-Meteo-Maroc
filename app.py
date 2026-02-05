@@ -23,6 +23,14 @@ st.set_page_config(
 # ==================== OPTIMIZED STYLING ====================
 st.markdown("""
     <style>
+    /* ===== HIDE DEFAULT STREAMLIT ELEMENTS ===== */
+    #MainMenu {visibility: hidden;}
+    footer {visibility: hidden;}
+    header {visibility: hidden;}
+    [data-testid="stHeader"] {background: rgba(0,0,0,0); border: none;}
+    
+    .stAppDeployButton {display: none;}
+    
     @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap');
     
     * {
@@ -132,10 +140,10 @@ st.markdown("""
     }
     
     .sidebar-header {
-        background: linear-gradient(135deg, rgba(0, 240, 255, 0.1) 0%, rgba(0, 136, 255, 0.1) 100%);
-        border: 1px solid rgba(0, 240, 255, 0.2);
+        background: linear-gradient(135deg, rgba(0, 240, 255, 0.05) 0%, rgba(0, 136, 255, 0.05) 100%);
+        border: 1px solid rgba(0, 240, 255, 0.1);
         border-radius: 10px;
-        padding: 1.2rem;
+        padding: 0.5rem;
         margin-bottom: 1.5rem;
         text-align: center;
     }
@@ -428,11 +436,17 @@ cities = {city: city for city in available_cities}
 
 st.sidebar.markdown("""
     <div class="sidebar-header">
-        <h3 style="margin: 0; font-size: 1.3rem; color: #00f0ff;">⚙️ CONFIGURATION</h3>
-        <p style="color: #b0c4de; margin-top: 0.3rem; font-size: 0.95rem;">Filtres et Paramètres</p>
+    """, unsafe_allow_html=True)
+    
+    if os.path.exists("assets/app_preview.png"):
+        st.sidebar.image("assets/app_preview.png", use_container_width=True)
+    
+    st.sidebar.markdown("""
+        <h3 style="margin: 0.5rem 0 0 0; font-size: 1.1rem; color: #00f0ff;">⚙️ CONFIGURATION</h3>
+        <p style="color: #b0c4de; margin-top: 0.1rem; font-size: 0.85rem;">Filtres et Paramètres</p>
     </div>
     """, unsafe_allow_html=True)
-
+    
 st.sidebar.markdown("### 🌍 Sélection Ville")
 selected_city_name = st.sidebar.selectbox(
     "Ville Principale",
@@ -506,6 +520,9 @@ insights = calculate_weather_insights(filtered_df)
 insights_2 = calculate_weather_insights(filtered_df_2) if filtered_df_2 is not None else None
 
 # ==================== MAIN CONTENT ====================
+
+if os.path.exists("assets/app_preview.png"):
+    st.image("assets/app_preview.png", use_container_width=True)
 
 if comparison_mode and selected_city_2_name:
     st.markdown(f'<h1 style="text-align: center; font-size: 2.5rem;">🌍 {selected_city_name} vs {selected_city_2_name}</h1>', unsafe_allow_html=True)

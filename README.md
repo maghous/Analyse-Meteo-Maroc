@@ -35,36 +35,6 @@ pip install -r requirements.txt
 streamlit run app.py
 ```
 
-## ☁️ Déploiement sur Streamlit Cloud
-
-### Étape 1 : Préparer votre dépôt GitHub
-
-1. Créez un nouveau dépôt sur GitHub
-2. Poussez tous les fichiers :
-
-```bash
-git init
-git add .
-git commit -m "Initial commit - Morocco Weather Analytics"
-git branch -M main
-git remote add origin <votre-url-github>
-git push -u origin main
-```
-
-### Étape 2 : Déployer sur Streamlit Cloud
-
-1. Allez sur [share.streamlit.io](https://share.streamlit.io)
-2. Connectez-vous avec votre compte GitHub
-3. Cliquez sur "New app"
-4. Sélectionnez :
-   - **Repository** : Votre dépôt
-   - **Branch** : main
-   - **Main file path** : app.py
-5. Cliquez sur "Deploy!"
-
-### Étape 3 : Configuration (optionnel)
-
-L'application utilise le fichier `.streamlit/config.toml` pour la configuration du thème.
 
 ## 📁 Structure du Projet
 
@@ -97,9 +67,9 @@ Agadir, Al Hoceima, Assilah, Azilal, Azrou, Beni Mellal, Berkane, Boujdour, Casa
 - L'application détecte automatiquement les fichiers CSV dans le répertoire
 - Compatible avec Streamlit Cloud sans modifications supplémentaires
 
-## 🌟 Version
+## 🌟Link
 
-**v4.0 Final** - Analyse Météorologique Professionnelle
+https://analyse-meteo-maroc.streamlit.app
 
 ---
 

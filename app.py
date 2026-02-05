@@ -436,14 +436,8 @@ cities = {city: city for city in available_cities}
 
 st.sidebar.markdown("""
 <div class="sidebar-header">
-""", unsafe_allow_html=True)
-
-if os.path.exists("assets/app_preview.png"):
-    st.sidebar.image("assets/app_preview.png", use_container_width=True)
-
-st.sidebar.markdown("""
-    <h3 style="margin: 0.5rem 0 0 0; font-size: 1.1rem; color: #00f0ff;">⚙️ CONFIGURATION</h3>
-    <p style="color: #b0c4de; margin-top: 0.1rem; font-size: 0.85rem;">Filtres et Paramètres</p>
+    <h3 style="margin: 0; font-size: 1.3rem; color: #00f0ff;">⚙️ CONFIGURATION</h3>
+    <p style="color: #b0c4de; margin-top: 0.3rem; font-size: 0.95rem;">Filtres et Paramètres</p>
 </div>
 """, unsafe_allow_html=True)
     
@@ -520,9 +514,6 @@ insights = calculate_weather_insights(filtered_df)
 insights_2 = calculate_weather_insights(filtered_df_2) if filtered_df_2 is not None else None
 
 # ==================== MAIN CONTENT ====================
-
-if os.path.exists("assets/app_preview.png"):
-    st.image("assets/app_preview.png", use_container_width=True)
 
 if comparison_mode and selected_city_2_name:
     st.markdown(f'<h1 style="text-align: center; font-size: 2.5rem;">🌍 {selected_city_name} vs {selected_city_2_name}</h1>', unsafe_allow_html=True)

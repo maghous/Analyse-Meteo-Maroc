@@ -1,4 +1,5 @@
 # 🌍 Morocco Weather Analytics Pro
+![App Preview](assets/app_preview.png)
 
 Une application d'analyse météorologique professionnelle pour le Maroc, développée avec Streamlit.
 

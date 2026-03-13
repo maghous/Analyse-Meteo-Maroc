@@ -116,7 +116,7 @@ The app will open automatically at `http://localhost:8501` 🎉
 
 ## 📁 Project Structure
 ```
-46100099-fra/
+Analyse-Meteo-Maroc/
 ├── app.py                    # Main Streamlit application
 ├── requirements.txt          # Python dependencies
 ├── assets/

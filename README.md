@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="assets/app_preview.png" alt="Morocco Weather Analytics Pro" width="800">
+  
 
   <h1>🌍 Morocco Weather Analytics Pro</h1>
   <p><b>Professional Meteorological Intelligence Platform | 44 Moroccan Cities</b></p>
